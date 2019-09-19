@@ -1,7 +1,7 @@
 # winform-
 
 
-！[](https://github.com/SHAREVIEW/winform-/blob/master/BD1C34AD-B9DC-4b08-9C07-4D94FED4E11E.png)
+![](https://github.com/SHAREVIEW/winform-/blob/master/BD1C34AD-B9DC-4b08-9C07-4D94FED4E11E.png)
 在WinForm之间传值有很多种方法,在这里我用的是delegate and event进行传值.
 
 新建一个WindowsApplication,创建两个WinForm.其实它们就是两个类.

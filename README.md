@@ -26,22 +26,30 @@ public partial class Form1 : Form
 使用委托实现两个窗体的交互:
 // 主窗体中
 FromB frm = new FromB("Hello A");
+
 frm.onReportProgress = new DoReportProgress(OnReportProgress);
+
 frm.ShowDialog(); // 显示窗体
+
 private void OnReportProgress(string str)
 {
   MessageBox.Show(str);
 }
 // 子窗体
+
 public delegate void DoReportProgress(string strInfor);
+
 public DoReportProgress onReportProgress;
+
 public FromB(string str) // 传入父窗体的值
 {
   InitializeComponent();
+  
   MessageBox.Show(str);
 }
 public void button1()
 {
   if(onReportProgress!=null)
+  
   onReportProgress("Hello B"); // 调用委托将值返回给父窗体
 }
